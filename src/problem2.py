@@ -104,14 +104,24 @@ def problem2a(circle, rectangle, window):
 
     circle.attach_to(window)
     rectangle.attach_to(window)
+    window.render()
 
     window.continue_on_mouse_click()
 
-    
-    rg.Line()
+    corner_1 = rectangle.get_upper_right_corner()
+    corner_2 = rectangle.get_lower_left_corner()
+    line = rg.Line(corner_1, corner_2)
+    line.arrow = 'last'
+    line.attach_to(window)
+    window.render()
+
+    window.continue_on_mouse_click()
+
+    circle.fill_color = 'blue'
+    window.render()
 
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
