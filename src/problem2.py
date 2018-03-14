@@ -191,6 +191,13 @@ def problem2b(rect, n, delta, win):
       :type delta:  int
       :type win:    rg.RoseWindow
     """
+
+    c_1 = rect.get_lower_left_corner()
+    c_2 = rect.get_upper_right_corner()
+    
+    for k in range(n):
+
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
